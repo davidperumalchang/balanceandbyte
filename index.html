@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance & Byte</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Balance & Byte provides structured monthly website management and accounting services for small businesses — helping you stay online, organised, and compliant without unnecessary complexity.">
+    <meta name="keywords" content="Balance & Byte, website management, accounting services, small businesses">
+    <meta name="author" content="Balance & Byte">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    
+    <!-- Google Fonts - Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0A1F44;
+            --primary-mid: #0d2a5a;
+            --primary-light: #3FA9F5;
+            --accent-cyan: #1ABC9C;
+            --text-light: #FFFFFF;
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --bg-light: #F4F6F8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sora', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, 
+                var(--primary-dark) 0%, 
+                var(--primary-mid) 50%, 
+                var(--primary-light) 100%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated Background Waves */
+        .wave-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .wave-bg svg {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+        }
+
+        .wave-1 {
+            top: 10%;
+            animation: wave-move 20s linear infinite;
+        }
+
+        .wave-2 {
+            top: 30%;
+            animation: wave-move 25s linear infinite reverse;
+        }
+
+        .wave-3 {
+            bottom: 10%;
+            animation: wave-move 18s linear infinite;
+        }
+
+        @keyframes wave-move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Floating Circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            right: -50px;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            left: -50px;
+            animation-delay: 2s;
+        }
+
+        .circle-3 {
+            width: 150px;
+            height: 150px;
+            top: 40%;
+            left: 10%;
+            border-color: rgba(26, 188, 156, 0.2);
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        /* Main Content */
+        .coming-soon-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        .logo {
+            margin-bottom: 2rem;
+        }
+
+        .logo-img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .logo-text .accent {
+            color: var(--accent-cyan);
+        }
+
+        .badge-soon {
+            display: inline-block;
+            background: rgba(26, 188, 156, 0.2);
+            color: var(--accent-cyan);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(26, 188, 156, 0.3);
+        }
+
+        .main-title {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--text-light);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+
+        .main-title span {
+            color: var(--accent-cyan);
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Notify Form */
+        .notify-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 450px;
+            margin: 0 auto 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .notify-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-light);
+            font-family: 'Sora', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .notify-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .notify-input:focus {
+            border-color: var(--accent-cyan);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .notify-btn {
+            padding: 1rem 2rem;
+            background: var(--accent-cyan);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 50px;
+            font-family: 'Sora', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .notify-btn:hover {
+            background: var(--text-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(26, 188, 156, 0.3);
+        }
+
+        /* Footer */
+        .footer-text {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .notify-input {
+                min-width: 100%;
+            }
+
+            .circle-1, .circle-2 {
+                display: none;
+            }
+        }
+
+        /* Animation for elements */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .fade-in-delay-1 { animation-delay: 0.2s; }
+        .fade-in-delay-2 { animation-delay: 0.4s; }
+        .fade-in-delay-3 { animation-delay: 0.6s; }
+        .fade-in-delay-4 { animation-delay: 0.8s; }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="wave-bg">
+        <svg class="wave wave-1" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path d="M0,192L48,176C96,160,192,128,288,138.7C384,149,480,203,576,213.3C672,224,768,192,864,165.3C960,139,1056,117,1152,128C1248,139,1344,181,1392,202.7L1440,224" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/>
+        </svg>
+        <svg class="wave wave-2" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,149.3C672,149,768,171,864,181.3C960,192,1056,192,1152,176C1248,160,1344,128,1392,112L1440,96" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none"/>
+        </svg>
+        <svg class="wave wave-3" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path d="M0,256L48,240C96,224,192,192,288,181.3C384,171,480,181,576,186.7C672,192,768,192,864,176C960,160,1056,128,1152,133.3C1248,139,1344,181,1392,202.7L1440,224" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" fill="none"/>
+        </svg>
+    </div>
+
+    <!-- Floating Circles -->
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+
+    <!-- Main Content -->
+    <div class="coming-soon-container">
+        <div class="fade-in">
+            <img src="assets/BNB_Logo.png" alt="Balance & Byte" class="logo-img">
+        </div>
+
+        <div class="logo fade-in">
+            <span class="logo-text">Balance & Byte</span>
+        </div>
+
+        <h1 class="main-title fade-in fade-in-delay-1">
+            Something <span>Amazing</span> is Coming
+        </h1>
+
+        <p class="description fade-in fade-in-delay-2">
+            We're preparing our website to offer structured monthly website management and accounting services for small businesses.
+        </p>
+
+        <!-- Notify Form -->
+        <form class="notify-form fade-in fade-in-delay-3" action="https://formspree.io/f/mkownkwj" method="POST">
+            <input type="email" name="email" class="notify-input" placeholder="Enter your email address" required>
+            <button type="submit" class="notify-btn">Get Notified</button>
+        </form>
+
+        <p class="footer-text fade-in fade-in-delay-4">
+            © 2025 Balance & Byte. All rights reserved.
+        </p>
+    </div>
+</body>
+</html>
+
