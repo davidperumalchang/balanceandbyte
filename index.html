@@ -20,10 +20,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Google Fonts - Sora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="assets/font/bootstrap-icons.css">
     
     <style>
         :root {
@@ -336,7 +342,7 @@
         </p>
 
         <!-- Notify Form -->
-        <form class="notify-form fade-in fade-in-delay-3" action="https://formspree.io/f/mkownkwj" method="POST">
+        <form id="notifyForm" class="notify-form fade-in fade-in-delay-3" action="https://formspree.io/f/mkownkwj" method="POST">
             <input type="email" name="email" class="notify-input" placeholder="Enter your email address" required>
             <button type="submit" class="notify-btn">Get Notified</button>
         </form>
@@ -345,6 +351,64 @@
             © 2025 Balance & Byte. All rights reserved.
         </p>
     </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid)); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px;">
+                <div class="modal-body text-center py-5">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
+                    <h4 style="color: var(--text-light); font-weight: 700; margin-bottom: 1rem;">Thank You!</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">You're on the list! We'll notify you when we launch.</p>
+                    <button type="button" class="notify-btn" data-bs-dismiss="modal" style="padding: 0.75rem 2rem;">Got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Form Submission Script -->
+    <script>
+        const form = document.getElementById("notifyForm");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.notify-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    const modal = new bootstrap.Modal(document.getElementById("successModal"));
+                    modal.show();
+                } else {
+                    alert("Oops! Something went wrong. Please try again.");
+                }
+            } catch (error) {
+                alert("Oops! Something went wrong. Please try again.");
+            }
+            
+            // Reset button
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
+    </script>
 </body>
 </html>
 
