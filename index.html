@@ -58,7 +58,8 @@
                 var(--primary-dark) 0%, 
                 var(--primary-mid) 50%, 
                 var(--primary-light) 100%);
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             position: relative;
         }
 
@@ -302,6 +303,53 @@
                 transform: translateY(0);
             }
         }
+
+        /* Modal Styles - Ensure proper display */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.show {
+            display: flex !important;
+        }
+
+        .modal-dialog {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-body {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .modal-body h4 {
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .modal-body p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -353,26 +401,55 @@
     </div>
 
     <!-- Success Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid)); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px;">
-                <div class="modal-body text-center py-5">
+    <div class="modal" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
                     <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
-                    <h4 style="color: var(--text-light); font-weight: 700; margin-bottom: 1rem;">Thank You!</h4>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">You're on the list! We'll notify you when we launch.</p>
-                    <button type="button" class="notify-btn" data-bs-dismiss="modal" style="padding: 0.75rem 2rem;">Got it!</button>
+                    <h4>Thank You!</h4>
+                    <p>You're on the list! We'll notify you when we launch.</p>
+                    <button type="button" class="notify-btn" id="closeModalBtn">Got it!</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    
     <!-- Form Submission Script -->
     <script>
         const form = document.getElementById("notifyForm");
+        const modal = document.getElementById("successModal");
+        const closeBtn = document.getElementById("closeModalBtn");
 
+        // Show modal function
+        function showModal() {
+            modal.classList.add("show");
+            document.body.style.overflow = "hidden";
+        }
+
+        // Hide modal function
+        function hideModal() {
+            modal.classList.remove("show");
+            document.body.style.overflow = "";
+        }
+
+        // Close modal on button click
+        closeBtn.addEventListener("click", hideModal);
+
+        // Close modal on backdrop click
+        modal.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" && modal.classList.contains("show")) {
+                hideModal();
+            }
+        });
+
+        // Form submission
         form.addEventListener("submit", async function (e) {
             e.preventDefault();
 
@@ -395,8 +472,7 @@
 
                 if (response.ok) {
                     form.reset();
-                    const modal = new bootstrap.Modal(document.getElementById("successModal"));
-                    modal.show();
+                    showModal();
                 } else {
                     alert("Oops! Something went wrong. Please try again.");
                 }
