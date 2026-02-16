@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balance & Byte</title>
-
+    
     <!-- Meta Description -->
     <meta name="description" content="Balance & Byte provides structured monthly website management and accounting services for small businesses — helping you stay online, organised, and compliant without unnecessary complexity.">
     <meta name="keywords" content="Balance & Byte, website management, accounting services, small businesses">
@@ -19,469 +19,968 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-    
+
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Google Fonts - Sora -->
+    <!-- Google Fonts - Sora for modern professional look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="assets/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
     
-    <style>
-        :root {
-            --primary-dark: #0A1F44;
-            --primary-mid: #0d2a5a;
-            --primary-light: #3FA9F5;
-            --accent-cyan: #1ABC9C;
-            --text-light: #FFFFFF;
-            --text-muted: rgba(255, 255, 255, 0.7);
-            --bg-light: #F4F6F8;
-        }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4LKK5LJE7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        body {
-            font-family: 'Sora', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, 
-                var(--primary-dark) 0%, 
-                var(--primary-mid) 50%, 
-                var(--primary-light) 100%);
-            overflow-x: hidden;
-            overflow-y: auto;
-            position: relative;
-        }
+    gtag('config', 'G-T4LKK5LJE7');
+    </script>
 
-        /* Animated Background Waves */
-        .wave-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .wave-bg svg {
-            position: absolute;
-            width: 200%;
-            height: 100%;
-        }
-
-        .wave-1 {
-            top: 10%;
-            animation: wave-move 20s linear infinite;
-        }
-
-        .wave-2 {
-            top: 30%;
-            animation: wave-move 25s linear infinite reverse;
-        }
-
-        .wave-3 {
-            bottom: 10%;
-            animation: wave-move 18s linear infinite;
-        }
-
-        @keyframes wave-move {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* Floating Circles */
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .circle-1 {
-            width: 300px;
-            height: 300px;
-            top: -100px;
-            right: -50px;
-            animation-delay: 0s;
-        }
-
-        .circle-2 {
-            width: 200px;
-            height: 200px;
-            bottom: -50px;
-            left: -50px;
-            animation-delay: 2s;
-        }
-
-        .circle-3 {
-            width: 150px;
-            height: 150px;
-            top: 40%;
-            left: 10%;
-            border-color: rgba(26, 188, 156, 0.2);
-            animation-delay: 4s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-20px) scale(1.05); }
-        }
-
-        /* Main Content */
-        .coming-soon-container {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            padding: 2rem;
-            max-width: 1200px;
-        }
-
-        .logo {
-            margin-bottom: 2rem;
-        }
-
-        .logo-img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        .logo-text {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--text-light);
-            text-decoration: none;
-        }
-
-        .logo-text .accent {
-            color: var(--accent-cyan);
-        }
-
-        .badge-soon {
-            display: inline-block;
-            background: rgba(26, 188, 156, 0.2);
-            color: var(--accent-cyan);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(26, 188, 156, 0.3);
-        }
-
-        .main-title {
-            font-size: 4rem;
-            font-weight: 700;
-            color: var(--text-light);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -2px;
-        }
-
-        .main-title span {
-            color: var(--accent-cyan);
-        }
-
-        .description {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            max-width: 550px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Notify Form */
-        .notify-form {
-            display: flex;
-            gap: 1rem;
-            max-width: 450px;
-            margin: 0 auto 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .notify-input {
-            flex: 1;
-            min-width: 250px;
-            padding: 1rem 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-light);
-            font-family: 'Sora', sans-serif;
-            font-size: 1rem;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .notify-input::placeholder {
-            color: var(--text-muted);
-        }
-
-        .notify-input:focus {
-            border-color: var(--accent-cyan);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .notify-btn {
-            padding: 1rem 2rem;
-            background: var(--accent-cyan);
-            color: var(--primary-dark);
-            border: none;
-            border-radius: 50px;
-            font-family: 'Sora', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .notify-btn:hover {
-            background: var(--text-light);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(26, 188, 156, 0.3);
-        }
-
-        /* Footer */
-        .footer-text {
-            margin-top: 3rem;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5rem;
-            }
-
-            .description {
-                font-size: 1rem;
-            }
-
-            .notify-input {
-                min-width: 100%;
-            }
-
-            .circle-1, .circle-2 {
-                display: none;
-            }
-        }
-
-        /* Animation for elements */
-        .fade-in {
-            animation: fadeIn 1s ease-out forwards;
-            opacity: 0;
-        }
-
-        .fade-in-delay-1 { animation-delay: 0.2s; }
-        .fade-in-delay-2 { animation-delay: 0.4s; }
-        .fade-in-delay-3 { animation-delay: 0.6s; }
-        .fade-in-delay-4 { animation-delay: 0.8s; }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Modal Styles - Ensure proper display */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(5px);
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal.show {
-            display: flex !important;
-        }
-
-        .modal-dialog {
-            max-width: 400px;
-            margin: auto;
-        }
-
-        .modal-content {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .modal-body {
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .modal-body h4 {
-            color: var(--text-light);
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .modal-body p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-    </style>
 </head>
 <body>
-    <!-- Background Elements -->
-    <div class="wave-bg">
-        <svg class="wave wave-1" viewBox="0 0 1440 320" preserveAspectRatio="none">
-            <path d="M0,192L48,176C96,160,192,128,288,138.7C384,149,480,203,576,213.3C672,224,768,192,864,165.3C960,139,1056,117,1152,128C1248,139,1344,181,1392,202.7L1440,224" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/>
-        </svg>
-        <svg class="wave wave-2" viewBox="0 0 1440 320" preserveAspectRatio="none">
-            <path d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,149.3C672,149,768,171,864,181.3C960,192,1056,192,1152,176C1248,160,1344,128,1392,112L1440,96" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none"/>
-        </svg>
-        <svg class="wave wave-3" viewBox="0 0 1440 320" preserveAspectRatio="none">
-            <path d="M0,256L48,240C96,224,192,192,288,181.3C384,171,480,181,576,186.7C672,192,768,192,864,176C960,160,1056,128,1152,133.3C1248,139,1344,181,1392,202.7L1440,224" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" fill="none"/>
-        </svg>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="brand-accent">B</span>&<span class="brand-accent">B</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clients">Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Floating Circles -->
-    <div class="circle circle-1"></div>
-    <div class="circle circle-2"></div>
-    <div class="circle circle-3"></div>
-
-    <!-- Main Content -->
-    <div class="coming-soon-container">
-        <div class="fade-in">
-            <img src="assets/BNB_Logo.png" alt="Balance & Byte" class="logo-img">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- Animated wave patterns -->
+        <div class="wave-container">
+            <svg class="wave wave-1" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path d="M0,192L48,176C96,160,192,128,288,138.7C384,149,480,203,576,213.3C672,224,768,192,864,165.3C960,139,1056,117,1152,128C1248,139,1344,181,1392,202.7L1440,224" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/>
+            </svg>
+            <svg class="wave wave-2" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,149.3C672,149,768,171,864,181.3C960,192,1056,192,1152,176C1248,160,1344,128,1392,112L1440,96" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none"/>
+            </svg>
+            <svg class="wave wave-3" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path d="M0,256L48,240C96,224,192,192,288,181.3C384,171,480,181,576,186.7C672,192,768,192,864,176C960,160,1056,128,1152,133.3C1248,139,1344,181,1392,202.7L1440,224" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" fill="none"/>
+            </svg>
+        </div>
+        
+        <!-- Geometric circles -->
+        <div class="geo-shapes">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
         </div>
 
-        <div class="logo fade-in">
-            <span class="logo-text">Balance & Byte</span>
+        <div class="container hero-content">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-12">
+                    <h1 class="hero-title">
+                        Balance & Byte
+                        <span class="hero-subtitle d-block">Websites & Accounting, Managed Monthly</span>
+                        <span class="hero-subtitle d-block">Simple. Predictable. Reliable.</span>
+                    </h1>
+                    <p class="hero-description">
+                        We provide structured monthly website management and accounting services for small businesses — helping you stay online, organised, and compliant without unnecessary complexity.
+                    </p>
+                    <a href="#services" class="btn btn-hero">
+                        Learn More
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <h1 class="main-title fade-in fade-in-delay-1">
-            Something <span>Amazing</span> is Coming
-        </h1>
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
 
-        <p class="description fade-in fade-in-delay-2">
-            We're preparing our website to offer structured monthly website management and accounting services for small businesses.
-        </p>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container container-services">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-description">
+                        Comprehensive solutions tailored to help your business thrive in the digital age while maintaining financial clarity.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Web Development Service -->
+                <div class="col-lg-6">
+                    <div class="service-card service-web">
+                        <div class="service-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h3 class="service-title">Website Development & Management</h3>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Custom Website Setup</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Secure Hosting & SSL</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Ongoing Maintenance</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Monthly Content Updates</li>
+                            <li><i class="bi bi-check-circle-fill"></i> SEO Setup</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Analytics Setup</li>
+                        </ul>
+                        <div class="service-actions">
+                            <button type="button" class="btn btn-pricing" data-bs-toggle="modal" data-bs-target="#websitePricingModal">
+                                <i class="bi bi-tag-fill me-2"></i> View Plans
+                            </button>
+                            <a href="#contact" class="service-link mt-3 d-block">
+                                Get Started <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Notify Form -->
-        <form id="notifyForm" class="notify-form fade-in fade-in-delay-3" action="https://formspree.io/f/mkownkwj" method="POST">
-            <input type="email" name="email" class="notify-input" placeholder="Enter your email address" required>
-            <button type="submit" class="notify-btn">Get Notified</button>
-        </form>
+                <!-- Accounting Service -->
+                <div class="col-lg-6">
+                    <div class="service-card service-accounting">
+                        <div class="service-icon">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+                        <h3 class="service-title">Accounting & Bookkeeping Services</h3>
+                        <ul class="service-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Monthly Bookkeeping</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Bank Reconciliation</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Profit & Loss Reports</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Balance Sheet Reports</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Tax-Ready Accounts</li>
+                            <li><i class="bi bi-check-circle-fill"></i> SST Support</li>
+                        </ul>
+                        <div class="service-actions">
+                            <button type="button" class="btn btn-pricing" data-bs-toggle="modal" data-bs-target="#accountingPricingModal">
+                                <i class="bi bi-tag-fill me-2"></i> View Plans
+                            </button>
+                            <a href="#contact" class="service-link mt-3 d-block">
+                                Get Started <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <p class="footer-text fade-in fade-in-delay-4">
-            © 2025 Balance & Byte. All rights reserved.
-        </p>
-    </div>
+    <!-- Clients Section -->
+    <section id="clients" class="clients-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-12 text-center">
+                    <span class="section-badge">Trusted By Many</span>
+                    <h2 class="section-title">Our Clients</h2>
+                    <p class="section-description">
+                        We're proud to have partnered with these amazing businesses to help them grow and succeed.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Success Modal -->
-    <div class="modal" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <!-- Client Grid -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="clients-grid">
+                    <div class="client-cell">
+                        <div class="client-logo-wrapper">
+                            <img src="assets/client_logo/dari.png" alt="Dari Logo">
+                        </div>
+                        <p class="client-name">Dari Guide</p>
+                        <p class="client-industry">Learning & Development</p>
+                    </div>
+
+                    <div class="client-cell">
+                        <div class="client-logo-wrapper">
+                            <img src="assets/client_logo/shelter.png" alt="Shelter Home Logo">
+                        </div>
+                        <p class="client-name">Shelter Home</p>
+                        <p class="client-industry">Welfare Organisation</p>
+                    </div>
+
+                    <div class="client-cell">
+                        <div class="client-logo-wrapper">
+                            <img src="assets/client_logo/JLI.png" alt="JLI Logo">
+                        </div>
+                        <p class="client-name">Josephs Livestock Industries</p>
+                        <p class="client-industry">Agriculture</p>
+                    </div>
+
+                    <div class="client-cell">
+                        <div class="client-logo-wrapper">
+                            <img src="assets/client_logo/cardiovascular.png" alt="Cardiovascular Logo">
+                        </div>
+                        <p class="client-name">Cardiovascular International</p>
+                        <p class="client-industry">Activewear Retail</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-12 text-center">
+                    <span class="section-badge">Get In Touch</span>
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-description">
+                        Have questions or ready to get started? Send us a message and we'll get back to you as soon as possible.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <form id="contactForm" action="https://formspree.io/f/mkownkwj" method="POST" class="contact-form">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Phone Number <span class="text-muted">(Optional)</span></label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+60 12-345 6789">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="service" class="form-label">Service Interested In</label>
+                                        <select class="form-control" id="service" name="service" required>
+                                            <option value="" disabled selected>Select a service</option>
+                                            <option value="Web Development">Web Development & Website Management</option>
+                                            <option value="Accounting">Accounting & Bookkeeping Services</option>
+                                            <option value="Both">Both Services</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="message" class="form-label">Your Message</label>
+                                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your business and how we can help..." required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-contact">
+                                        Send Message
+                                        <i class="bi bi-send ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Pricing Modal -->
+    <div class="modal fade" id="websitePricingModal" tabindex="-1" aria-labelledby="websitePricingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="websitePricingModalLabel">Website Management Plans</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">
-                    <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
-                    <h4>Thank You!</h4>
-                    <p>You're on the list! We'll notify you when we launch.</p>
-                    <button type="button" class="notify-btn" id="closeModalBtn">Got it!</button>
+                    <!-- Plan Headers (sticky) -->
+                    <div class="plan-cards-row">
+                        <div class="plan-card">
+                            <h4 class="plan-card-name">Essential</h4>
+                            <div class="plan-card-price">RM 129<span>/mo</span></div>
+                            <div class="plan-card-setup">Setup: RM 299</div>
+                            <button type="button" class="btn btn-plan-cta" data-plan="Essential">Discuss</button>
+                        </div>
+                        <div class="plan-card plan-card-featured">
+                            <div class="plan-card-badge">MOST POPULAR</div>
+                            <h4 class="plan-card-name">Growth</h4>
+                            <div class="plan-card-price">RM 249<span>/mo</span></div>
+                            <div class="plan-card-setup">Setup: RM 499</div>
+                            <button type="button" class="btn btn-plan-cta btn-cta-featured" data-plan="Growth">Discuss</button>
+                        </div>
+                        <div class="plan-card">
+                            <h4 class="plan-card-name">Premium</h4>
+                            <div class="plan-card-price">RM 449<span>/mo</span></div>
+                            <div class="plan-card-setup">Setup: RM 1,299</div>
+                            <button type="button" class="btn btn-plan-cta" data-plan="Premium">Discuss</button>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Sections -->
+                    <div class="pricing-accordion">
+
+                        <!-- Website & Monitoring -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-globe2"></i></div>
+                                    <h5>Website & Monitoring</h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">Mobile-friendly website</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">SSL (HTTPS) setup</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Hosting & uptime monitoring</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content & Support -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-pencil-square"></i></div>
+                                    <h5>Content & Support</h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">Minor content updates</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><span>Up to 2 hrs / month</span></div>
+                                        <div class="fv fv-featured"><span>Up to 4 hrs / month</span></div>
+                                        <div class="fv"><span>Up to 8 hrs / month</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Domain & Hosting -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-hdd-network"></i></div>
+                                    <h5>Domain & Hosting</h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">Domain & hosting setup + configuration</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Forms -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-ui-checks"></i></div>
+                                    <h5>Forms</h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">Forms included</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><span>1 form</span></div>
+                                        <div class="fv fv-featured"><span>Up to 3 forms</span></div>
+                                        <div class="fv"><span>Up to 8 forms</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Analytics & Reporting -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-bar-chart-line"></i></div>
+                                    <h5>Analytics & Reporting</h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">Analytics setup</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Monthly website report</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Google Maps integration</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email & SEO -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-envelope-at"></i></div>
+                                    <h5>Email & SEO</h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">Company email setup</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Basic SEO setup</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="pricing-notes-new">
+                        <h6><i class="bi bi-info-circle me-2"></i>Important notes</h6>
+                        <ol>
+                            <li>Domain and hosting are purchased by the client. We handle setup, configuration, monitoring, and ongoing management.</li>
+                            <li>Domain registration and hosting renewals are billed directly by the provider.</li>
+                            <li>All services are billed monthly and require a minimum 12-month commitment.</li>
+                            <li>Early cancellation before the end of the contract will incur an early termination fee equal to 50% of the remaining contract value.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Form Submission Script -->
+    <!-- Accounting Pricing Modal -->
+    <div class="modal fade" id="accountingPricingModal" tabindex="-1" aria-labelledby="accountingPricingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="accountingPricingModalLabel">Accounting & Bookkeeping Plans</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Plan Headers (sticky) -->
+                    <div class="plan-cards-row">
+                        <div class="plan-card">
+                            <h4 class="plan-card-name">Basic</h4>
+                            <div class="plan-card-price">RM 650<span>/mo</span></div>
+                            <div class="plan-card-setup">Setup: RM 250</div>
+                            <div class="plan-card-detail">0 – 50 transactions/mo</div>
+                            <button type="button" class="btn btn-plan-cta" data-plan="Basic Accounting" data-service="Accounting">Discuss</button>
+                        </div>
+                        <div class="plan-card plan-card-featured">
+                            <div class="plan-card-badge">MOST POPULAR</div>
+                            <h4 class="plan-card-name">Standard</h4>
+                            <div class="plan-card-price">RM 1,650<span>/mo</span></div>
+                            <div class="plan-card-setup">Setup: RM 500</div>
+                            <div class="plan-card-detail">51 – 150 transactions/mo</div>
+                            <button type="button" class="btn btn-plan-cta btn-cta-featured" data-plan="Standard Accounting" data-service="Accounting">Discuss</button>
+                        </div>
+                        <div class="plan-card">
+                            <h4 class="plan-card-name">Premium</h4>
+                            <div class="plan-card-price">RM 3,800<span>/mo</span></div>
+                            <div class="plan-card-setup">Setup: RM 1,000</div>
+                            <div class="plan-card-detail">151 – 300 transactions/mo</div>
+                            <button type="button" class="btn btn-plan-cta" data-plan="Premium Accounting" data-service="Accounting">Discuss</button>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Sections -->
+                    <div class="pricing-accordion">
+
+                        <!-- Core Accounting -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-journal-text"></i></div>
+                                    <h5>Core Accounting</h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">QuickBooks Data Entry</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Bank & Cash Reconciliation</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Ledger Maintenance</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Monthly P&L & Balance Sheet</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Expense Categorisation</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Receivables & Payables Tracking</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Management Accounts - Full Set</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Invoices and Quotations</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tax & Compliance -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-shield-check"></i></div>
+                                    <h5>Tax & Compliance</h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">SST Preparation</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">SST Filing</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advisory & Forecasting -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                    <h5>Advisory & Forecasting</h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">Cashflow Forecasting</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Profit & Loss Projections</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Budgeting Support</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Advisory Meetings</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv"><span>Monthly</span></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Audit Support / Liaison</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Priority Support</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payroll (via Payroll Panda) -->
+                        <div class="pricing-section">
+                            <div class="pricing-section-header" data-toggle-section>
+                                <div class="section-header-left">
+                                    <div class="section-icon"><i class="bi bi-people"></i></div>
+                                    <h5>Payroll <span class="section-tag">via Payroll Panda</span></h5>
+                                </div>
+                                <i class="bi bi-chevron-down section-chevron"></i>
+                            </div>
+                            <div class="pricing-section-body open">
+                                <div class="feature-row">
+                                    <div class="feature-name">Employee Limit</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><span>Up to 3</span></div>
+                                        <div class="fv fv-featured"><span>Up to 8</span></div>
+                                        <div class="fv"><span>Up to 15</span></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Salary Calculation</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Payslip Generation</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Tax & statutory calculations</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Statutory submissions</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">New Joiner / Resignation Final Pay</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Bonus / Increment Processing</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Form EA / Year-End Forms</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Basic leave management</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Advance leave management</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Claims Processing</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                        <div class="fv"><i class="bi bi-check-circle-fill text-success"></i></div>
+                                    </div>
+                                </div>
+                                <div class="feature-row">
+                                    <div class="feature-name">Employee Payroll Queries</div>
+                                    <div class="feature-vals">
+                                        <div class="fv"><i class="bi bi-x-circle-fill text-danger"></i></div>
+                                        <div class="fv fv-featured"><span>Limited</span></div>
+                                        <div class="fv"><span>Included</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add-On Services -->
+                    <div class="addon-services">
+                        <div class="addon-header">
+                            <i class="bi bi-plus-circle me-2"></i>Add-On Services
+                        </div>
+                        <div class="addon-table">
+                            <div class="addon-row">
+                                <div class="addon-item">Extra 50 Transactions</div>
+                                <div class="addon-price">RM 250 / month</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">Extra Employee</div>
+                                <div class="addon-price">RM 30 / month</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">Extra Bank Account</div>
+                                <div class="addon-price">RM 200 / month</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">Extra Entity</div>
+                                <div class="addon-price">RM 500 / month</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">Historical Data Entry</div>
+                                <div class="addon-price">RM 80 – 120 / hour</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">System Migration / Setup</div>
+                                <div class="addon-price">RM 2,000 – 8,000 (depending on complexity)</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">Finance Advisory Session</div>
+                                <div class="addon-price">RM 300 / hour</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">E-Invoicing Setup (One-Off)</div>
+                                <div class="addon-price">RM 500 – RM 1,500</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">E-Invoicing Management (Monthly)</div>
+                                <div class="addon-price">RM 150 – RM 350 / month</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">Personal Tax Computation & Submission</div>
+                                <div class="addon-price">Consult accountant for details</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">Business Tax Computation & Submission</div>
+                                <div class="addon-price">Consult accountant for details</div>
+                            </div>
+                            <div class="addon-row">
+                                <div class="addon-item">Full set accounts, payroll & tax (300+ transactions)</div>
+                                <div class="addon-price">Consult accountant for details</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="pricing-notes-new">
+                        <h6><i class="bi bi-info-circle me-2"></i>Important notes</h6>
+                        <ol>
+                            <li>All plans include QuickBooks subscription and Payroll Panda — no separate billing required.</li>
+                            <li>Transaction counts are based on monthly averages. Overages may incur additional charges.</li>
+                            <li>All services are billed monthly and require a minimum 12-month commitment.</li>
+                            <li>Early cancellation before the end of the contract will incur an early termination fee equal to 50% of the remaining contract value.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-5">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
+                    <h4 class="mb-3" style="color: var(--text-dark);">Thank You!</h4>
+                    <p class="text-muted mb-4">Your message has been sent successfully. We'll get back to you as soon as possible.</p>
+                    <button type="button" class="btn btn-contact" data-bs-dismiss="modal">Got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="footer-text">© <span id="currentYear"></span> Balance & Byte. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
     <script>
-        const form = document.getElementById("notifyForm");
-        const modal = document.getElementById("successModal");
-        const closeBtn = document.getElementById("closeModalBtn");
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Show modal function
-        function showModal() {
-            modal.classList.add("show");
-            document.body.style.overflow = "hidden";
-        }
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
 
-        // Hide modal function
-        function hideModal() {
-            modal.classList.remove("show");
-            document.body.style.overflow = "";
-        }
-
-        // Close modal on button click
-        closeBtn.addEventListener("click", hideModal);
-
-        // Close modal on backdrop click
-        modal.addEventListener("click", function(e) {
-            if (e.target === modal) {
-                hideModal();
-            }
-        });
-
-        // Close modal on Escape key
-        document.addEventListener("keydown", function(e) {
-            if (e.key === "Escape" && modal.classList.contains("show")) {
-                hideModal();
-            }
-        });
-
-        // Form submission
-        form.addEventListener("submit", async function (e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
-            const formData = new FormData(form);
-            const submitBtn = form.querySelector('.notify-btn');
-            const originalText = submitBtn.textContent;
-            
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector('.btn-contact');
+            const originalHTML = submitBtn.innerHTML;
+
             // Show loading state
-            submitBtn.textContent = 'Sending...';
+            submitBtn.innerHTML = 'Sending... <i class="bi bi-hourglass-split ms-2"></i>';
             submitBtn.disabled = true;
 
             try {
-                const response = await fetch(form.action, {
-                    method: form.method,
+                const response = await fetch(contactForm.action, {
+                    method: contactForm.method,
                     body: formData,
                     headers: {
-                        "Accept": "application/json"
+                        'Accept': 'application/json'
                     }
                 });
 
                 if (response.ok) {
-                    form.reset();
-                    showModal();
+                    contactForm.reset();
+                    successModal.show();
                 } else {
-                    alert("Oops! Something went wrong. Please try again.");
+                    alert('Oops! Something went wrong. Please try again.');
                 }
             } catch (error) {
-                alert("Oops! Something went wrong. Please try again.");
+                alert('Oops! Something went wrong. Please try again.');
             }
-            
+
             // Reset button
-            submitBtn.textContent = originalText;
+            submitBtn.innerHTML = originalHTML;
             submitBtn.disabled = false;
         });
     </script>
