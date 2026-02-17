@@ -49,7 +49,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
+            <a class="navbar-brand fw-bold" href="#home">
                 <span class="brand-accent">B</span>&<span class="brand-accent">B</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -59,6 +59,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
@@ -123,11 +126,70 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-badge">Get To Know Us</span>
+                    <h2 class="section-title">About Us</h2>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Who We Are Card -->
+                <div class="col-lg-6">
+                    <div class="about-card about-card-who">
+                        <div class="about-card-icon">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <h3 class="about-card-title">Who We Are</h3>
+                        <p class="about-card-desc">
+                            Balance & Byte was created to help small businesses manage their websites and accounting in a simple, structured way.
+                        </p>
+                        <p class="about-card-desc">We noticed that many SMEs struggle with the same challenges:</p>
+                        <ul class="about-features">
+                            <li><i class="bi bi-exclamation-circle-fill"></i> Websites that become outdated or difficult to maintain</li>
+                            <li><i class="bi bi-exclamation-circle-fill"></i> Accounting tasks that pile up and feel overwhelming</li>
+                            <li><i class="bi bi-exclamation-circle-fill"></i> Multiple vendors to manage for different services</li>
+                        </ul>
+                        <p class="about-card-closing">
+                            Our goal is to provide reliable monthly services that remove these burdens and give business owners peace of mind.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- What We Do Card -->
+                <div class="col-lg-6">
+                    <div class="about-card about-card-what">
+                        <div class="about-card-icon">
+                            <i class="bi bi-gear-wide-connected"></i>
+                        </div>
+                        <h3 class="about-card-title">What We Do</h3>
+                        <p class="about-card-desc">
+                            We offer subscription-based website management and accounting services designed specifically for small and growing businesses.
+                        </p>
+                        <p class="about-card-desc">Instead of one-off projects or unpredictable costs, our approach focuses on:</p>
+                        <ul class="about-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Predictable monthly pricing</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Ongoing support and maintenance</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Long-term partnership</li>
+                        </ul>
+                        <p class="about-card-closing">
+                            We believe businesses should not have to worry about technical issues or falling behind on their financial records.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="container container-services">
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-12 text-center">
+                    <span class="section-badge">What We Offer</span>
                     <h2 class="section-title">Our Services</h2>
                     <p class="section-description">
                         Comprehensive solutions tailored to help your business thrive in the digital age while maintaining financial clarity.
@@ -518,8 +580,6 @@
                     <div class="pricing-notes-new">
                         <h6><i class="bi bi-info-circle me-2"></i>Important notes</h6>
                         <ol>
-                            <li>Domain and hosting are purchased by the client. We handle setup, configuration, monitoring, and ongoing management.</li>
-                            <li>Domain registration and hosting renewals are billed directly by the provider.</li>
                             <li>All services are billed monthly and require a minimum 12-month commitment.</li>
                             <li>Early cancellation before the end of the contract will incur an early termination fee equal to 50% of the remaining contract value.</li>
                         </ol>

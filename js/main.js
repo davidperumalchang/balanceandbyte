@@ -91,6 +91,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
+    // Observe about cards
+    document.querySelectorAll('.about-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        observer.observe(card);
+    });
+    
     // Observe service cards
     document.querySelectorAll('.service-card').forEach(card => {
         card.style.opacity = '0';
