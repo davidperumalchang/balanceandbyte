@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/bootstrap-icons.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.0.0">
+    <link rel="stylesheet" href="css/style.css?v=1.0.1">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4LKK5LJE7"></script>
@@ -272,37 +272,53 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
                 <div class="clients-grid">
-                    <div class="client-cell">
+                    <a class="client-cell" href="https://dari.guide/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dari Guide website (opens in new tab)">
                         <div class="client-logo-wrapper">
                             <img src="assets/client_logo/dari.png" alt="Dari Logo">
                         </div>
                         <p class="client-name">Dari Guide</p>
                         <p class="client-industry">Learning & Development</p>
-                    </div>
+                        <span class="client-visit" aria-hidden="true">Visit Website <i class="bi bi-arrow-up-right"></i></span>
+                    </a>
 
-                    <div class="client-cell">
+                    <a class="client-cell" href="https://www.shelterhome.org/" target="_blank" rel="noopener noreferrer" aria-label="Visit Shelter Home website (opens in new tab)">
                         <div class="client-logo-wrapper">
                             <img src="assets/client_logo/shelter.png" alt="Shelter Home Logo">
                         </div>
                         <p class="client-name">Shelter Home</p>
                         <p class="client-industry">Welfare Organisation</p>
-                    </div>
+                        <span class="client-visit" aria-hidden="true">Visit Website <i class="bi bi-arrow-up-right"></i></span>
+                    </a>
 
-                    <div class="client-cell">
+                    <a class="client-cell" href="https://josephslivestockindustries.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Josephs Livestock Industries website (opens in new tab)">
                         <div class="client-logo-wrapper">
                             <img src="assets/client_logo/JLI.png" alt="JLI Logo">
                         </div>
                         <p class="client-name">Josephs Livestock Industries</p>
                         <p class="client-industry">Agriculture</p>
-                    </div>
+                        <span class="client-visit" aria-hidden="true">Visit Website <i class="bi bi-arrow-up-right"></i></span>
+                    </a>
 
-                    <div class="client-cell">
+                    <a class="client-cell" href="https://destinyc3.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Destiny C3 website (opens in new tab)">
                         <div class="client-logo-wrapper">
-                            <img src="assets/client_logo/cardiovascular.png" alt="Cardiovascular Logo">
+                            <img src="assets/client_logo/dc3.png" alt="Destiny C3 Logo">
+                        </div>
+                        <p class="client-name">Destiny C3</p>
+                        <p class="client-industry">Church</p>
+                        <span class="client-visit" aria-hidden="true">Visit Website <i class="bi bi-arrow-up-right"></i></span>
+                    </a>
+                </div>
+
+                <div class="clients-past-row">
+                    <button type="button" class="client-cell client-cell-archived" data-bs-toggle="modal" data-bs-target="#cardiovascularCaseStudyModal" aria-label="View past work for Cardiovascular International">
+                        <span class="client-badge">Past Client</span>
+                        <div class="client-logo-wrapper">
+                            <img src="assets/client_logo/cardiovascular.png" alt="Cardiovascular International Logo">
                         </div>
                         <p class="client-name">Cardiovascular International</p>
                         <p class="client-industry">Activewear Retail</p>
-                    </div>
+                        <span class="client-visit client-visit-archive" aria-hidden="true">View Work <i class="bi bi-arrow-up-right"></i></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -977,6 +993,147 @@
         </div>
     </div>
 
+    <!-- Cardiovascular International Case Study Modal -->
+    <div class="modal fade" id="cardiovascularCaseStudyModal" tabindex="-1" aria-labelledby="cardiovascularCaseStudyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h5 class="modal-title" id="cardiovascularCaseStudyModalLabel">Cardiovascular International</h5>
+                        <p class="modal-subtitle">E-Commerce</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="case-study-tags">
+                        <span class="case-study-tag case-study-tag-muted">Archived Project</span>
+                        <span class="case-study-tag">E-Commerce</span>
+                        <span class="case-study-tag">Apparel Retail</span>
+                        <span class="case-study-tag">Malaysia</span>
+                    </div>
+
+                    <div class="case-study-footnote">
+                        <i class="bi bi-info-circle"></i>
+                        <span>This business has since closed. Screenshots are preserved here as a portfolio reference of the work delivered.</span>
+                    </div>
+
+                    <p class="case-study-intro">
+                        A complete e-commerce flagship for a Malaysian activewear brand — from a
+                        lifestyle-driven homepage through to a fully-featured shop covering product
+                        browsing, quick view, cart, and checkout.
+                    </p>
+
+                    <div id="cardiovascularCarousel" class="carousel slide ci-carousel" data-bs-ride="false" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">Homepage with lifestyle photography and seasonal collection feature.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/cardiovascular/ci_1.png" alt="Cardiovascular International homepage with lifestyle photography of two cyclists wearing branded T-shirts" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-item">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">Merchandise catalogue with category filters and price-range slider.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/cardiovascular/ci_2.png" alt="Merchandise catalogue page with product grid and filter sidebar" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-item">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">Quick-view product modal for fast in-page previews.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/cardiovascular/ci_4.png" alt="Quick-view product modal overlay showing a tank top with price and Add to Cart button" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-item">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">Product detail page with image gallery and size guide.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/cardiovascular/ci_3.png" alt="Product detail page with image gallery, description, and size chart" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-item">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">Shopping cart with coupon code and shipping calculator.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/cardiovascular/ci_5.png" alt="Shopping cart page with quantity controls, coupon field, and shipping calculator" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-item">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">Checkout with billing &amp; shipping form and order summary.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/cardiovascular/ci_6.png" alt="Checkout page with billing and shipping form and order summary" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev ci-control" type="button" data-bs-target="#cardiovascularCarousel" data-bs-slide="prev">
+                            <span aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next ci-control" type="button" data-bs-target="#cardiovascularCarousel" data-bs-slide="next">
+                            <span aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                        <div class="carousel-indicators ci-indicators">
+                            <button type="button" data-bs-target="#cardiovascularCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#cardiovascularCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#cardiovascularCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#cardiovascularCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#cardiovascularCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#cardiovascularCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Success Modal -->
     <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -1002,7 +1159,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
-    <script src="js/main.js?v=1.0.0"></script>
+    <script src="js/main.js?v=1.0.1"></script>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
