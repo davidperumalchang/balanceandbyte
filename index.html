@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/bootstrap-icons.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.0.1">
+    <link rel="stylesheet" href="css/style.css?v=1.0.2">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4LKK5LJE7"></script>
@@ -290,15 +290,6 @@
                         <span class="client-visit" aria-hidden="true">Visit Website <i class="bi bi-arrow-up-right"></i></span>
                     </a>
 
-                    <a class="client-cell" href="https://josephslivestockindustries.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Josephs Livestock Industries website (opens in new tab)">
-                        <div class="client-logo-wrapper">
-                            <img src="assets/client_logo/JLI.png" alt="JLI Logo">
-                        </div>
-                        <p class="client-name">Josephs Livestock Industries</p>
-                        <p class="client-industry">Agriculture</p>
-                        <span class="client-visit" aria-hidden="true">Visit Website <i class="bi bi-arrow-up-right"></i></span>
-                    </a>
-
                     <a class="client-cell" href="https://destinyc3.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Destiny C3 website (opens in new tab)">
                         <div class="client-logo-wrapper">
                             <img src="assets/client_logo/dc3.png" alt="Destiny C3 Logo">
@@ -310,6 +301,16 @@
                 </div>
 
                 <div class="clients-past-row">
+                    <button type="button" class="client-cell client-cell-archived" data-bs-toggle="modal" data-bs-target="#jliCaseStudyModal" aria-label="View past work for Josephs Livestock Industries">
+                        <span class="client-badge">Past Client</span>
+                        <div class="client-logo-wrapper">
+                            <img src="assets/client_logo/JLI.png" alt="Josephs Livestock Industries Logo">
+                        </div>
+                        <p class="client-name">Josephs Livestock Industries</p>
+                        <p class="client-industry">Agriculture</p>
+                        <span class="client-visit client-visit-archive" aria-hidden="true">View Work <i class="bi bi-arrow-up-right"></i></span>
+                    </button>
+
                     <button type="button" class="client-cell client-cell-archived" data-bs-toggle="modal" data-bs-target="#cardiovascularCaseStudyModal" aria-label="View past work for Cardiovascular International">
                         <span class="client-badge">Past Client</span>
                         <div class="client-logo-wrapper">
@@ -993,6 +994,118 @@
         </div>
     </div>
 
+    <!-- Josephs Livestock Industries Case Study Modal -->
+    <div class="modal fade" id="jliCaseStudyModal" tabindex="-1" aria-labelledby="jliCaseStudyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h5 class="modal-title" id="jliCaseStudyModalLabel">Josephs Livestock Industries</h5>
+                        <p class="modal-subtitle">Corporate Website &amp; Product Catalogue</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="case-study-tags">
+                        <span class="case-study-tag case-study-tag-muted">Archived Project</span>
+                        <span class="case-study-tag">Corporate Website</span>
+                        <span class="case-study-tag">Product Catalogue</span>
+                        <span class="case-study-tag">Agriculture</span>
+                        <span class="case-study-tag">Malaysia</span>
+                    </div>
+
+                    <div class="case-study-footnote">
+                        <i class="bi bi-info-circle"></i>
+                        <span>This website is no longer managed by Balance &amp; Byte. Screenshots are preserved here as a portfolio reference of the work delivered.</span>
+                    </div>
+
+                    <p class="case-study-intro">
+                        A bilingual (English / Bahasa Malaysia) website for a Malaysian supplier of livestock
+                        feed, pet food, and farm supplies — featuring a searchable, category-filtered catalogue
+                        of 100+ products with direct WhatsApp enquiry.
+                    </p>
+
+                    <div id="jliCarousel" class="carousel slide ci-carousel" data-bs-ride="false" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">Homepage with brand-led hero and language toggle.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/jli/jli_1.png" alt="Josephs Livestock Industries homepage with a pastoral farm hero image, logo, and Learn More button" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-item">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">About section highlighting product ranges and in-house products.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/jli/jli_2.png" alt="About Us section with cards for livestock feed, in-house products, pet food, farm supplies, agricultural products, and health and nutrition" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-item">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">Product catalogue with category sidebar and WhatsApp enquiry.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/jli/jli_3.png" alt="Product catalogue page showing 107 products with a category sidebar and WhatsApp Enquiry buttons" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+
+                            <div class="carousel-item">
+                                <figure class="ci-slide">
+                                    <figcaption class="ci-caption">Instant product search across the full catalogue.</figcaption>
+                                    <div class="case-study-browser">
+                                        <div class="case-study-browser-bar">
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                            <span class="case-study-browser-dot"></span>
+                                        </div>
+                                        <img src="assets/past_client/jli/jli_4.png" alt="Product search for 'Vit' returning four matching supplements and health products" loading="lazy">
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev ci-control" type="button" data-bs-target="#jliCarousel" data-bs-slide="prev">
+                            <span aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next ci-control" type="button" data-bs-target="#jliCarousel" data-bs-slide="next">
+                            <span aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                        <div class="carousel-indicators ci-indicators">
+                            <button type="button" data-bs-target="#jliCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#jliCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#jliCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#jliCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Cardiovascular International Case Study Modal -->
     <div class="modal fade" id="cardiovascularCaseStudyModal" tabindex="-1" aria-labelledby="cardiovascularCaseStudyModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -1159,7 +1272,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
-    <script src="js/main.js?v=1.0.1"></script>
+    <script src="js/main.js?v=1.0.2"></script>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 

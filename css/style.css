@@ -775,7 +775,7 @@ body {
 /* Clients Grid */
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     border: 1px solid var(--border-color, #e5e7eb);
     border-radius: 1rem;
@@ -918,12 +918,14 @@ body {
 .clients-past-row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin-top: 0.75rem;
 }
 
 .clients-past-row .client-cell {
     width: 100%;
-    max-width: calc(25% - 0.5rem);
+    max-width: calc((100% - 1.5rem) / 3);
     border: 1px solid var(--border-color, #e5e7eb);
     border-radius: 1rem;
     overflow: hidden;
@@ -931,10 +933,6 @@ body {
 
 /* Clients Section Responsive */
 @media (min-width: 768px) {
-    .clients-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
     .client-cell {
         padding: 3rem 1.5rem;
     }
@@ -952,7 +950,7 @@ body {
     }
 
     .clients-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .client-cell {
